@@ -2,12 +2,15 @@
  Asp.net Api
  チュートリアル: ASP.NET Core で Web API を作成する
  
-https://docs.microsoft.com/ja-jp/aspnet/core/tutorials/first-web-api?view=aspnetcore-3.1&tabs=visual-studio
+https://docs.microsoft.com/ja-jp/aspnet使用前面的说明添加 Microsoft.EntityFrameworkCore.InMemory NuGet 包。/core/tutorials/first-web-api?view=aspnetcore-3.1&tabs=visual-studio
+【Microsoft.EntityFrameworkCore.InMemory NuGet 包】必须要安装
 
 
 * * *
 
-Ctrl キーを押しながら F5 キーを押して、アプリを実行します。 Visual Studio でブラウザーが起動し、https://localhost:<port>/WeatherForecast にアクセスします。ここで、<port> はランダムに選択されたポート番号になります。
+Ctrl キーを押しながら F5 キーを押して、アプリを実行します。 Visual Studio でブラウザーが起動し、https://localservices.AddDbContext<TodoContext>(opt =>
+               opt.UseInMemoryDatabase("TodoList"));host:<port>/WeatherForecast にアクセスします。ここで、<port> はランダムに選択されたポート番号になります。
+   [UseInMemoryDatabase]  使用以方便时，是在内存中创建数据库，iis停止后，数据不再持久化
 
 
 **Postman のインストール**
@@ -37,4 +40,4 @@ JSON
 }
 [Send] を選択します。
 
-[JOSN(application/json)]必须要选择。
+**[JOSN(application/json)]必须要选择。**
